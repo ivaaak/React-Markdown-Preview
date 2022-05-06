@@ -1,7 +1,7 @@
-const Header = () => /*#__PURE__*/
-React.createElement("header", { className: "titleContainer" }, /*#__PURE__*/
-React.createElement("h1", { className: "titleLeft" }, "Raw Markdown:"),  /*#__PURE__*/
-React.createElement("h1", { className: "titleRight" }, "Preview:"));  /*#__PURE__*/
+const Header = () => 
+React.createElement("header", { className: "titleContainer" }, 
+React.createElement("h1", { className: "titleLeft" }, "Raw Markdown:"),  
+React.createElement("h1", { className: "titleRight" }, "Preview:")); 
 
 
 class Markdown extends React.Component {
@@ -20,25 +20,25 @@ class Markdown extends React.Component {
     this.setState({ value: event.target.value });
   }
   render() {
-    return /*#__PURE__*/React.createElement("div", { className: "row" }, /*#__PURE__*/
-    React.createElement("div", { className: "col-sm-6" }, /*#__PURE__*/
+    return React.createElement("div", { className: "row" }, 
+    React.createElement("div", { className: "col-sm-6" }, 
     React.createElement("textarea", {
       type: "text",
       defaultValue: this.state.value,
       onChange: this.handleChange.bind(this),
       id: "markdown",
-      className: "col-xs-10 col-xs-offset-1 full-height" })), /*#__PURE__*/
+      className: "col-xs-10 col-xs-offset-1 full-height" })), 
 
-    React.createElement("div", { className: "col-sm-6" }, /*#__PURE__*/
+    React.createElement("div", { className: "col-sm-6" }, 
     React.createElement("div", { id: "htmlArea",
-      className: "col-xs-10 col-xs-offset-1 full-height" }, /*#__PURE__*/
+      className: "col-xs-10 col-xs-offset-1 full-height" }, 
     React.createElement("div", { dangerouslySetInnerHTML: this.createMarkup() }))));
   }}
   
 
-const App = () => /*#__PURE__*/
-React.createElement("div", { className: "container-fluid" }, /*#__PURE__*/
-React.createElement(Header, null), /*#__PURE__*/
-React.createElement(Markdown, null)); /*#__PURE__*/
+const App = () => 
+React.createElement("div", { className: "container-fluid" }, 
+React.createElement(Header, null), 
+React.createElement(Markdown, null)); 
 document.write('<div id="app"></div>');
-ReactDOM.render( /*#__PURE__*/React.createElement(App, null), document.getElementById('app'));
+ReactDOM.render( React.createElement(App, null), document.getElementById('app'));
